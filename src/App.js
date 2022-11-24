@@ -1,10 +1,14 @@
 import './App.css';
-import Main from './components/Main';
+import { UserContextProvider } from './context/userContext';
+import Routes from './Routers';
+
 
 function App() {
   return (
     <div>
-      < Main />
+      <UserContextProvider>
+      < Routes />
+      </UserContextProvider>
     </div>
   );
 }
