@@ -13,10 +13,11 @@ function UserContextProvider({children}) {
 })
     React.useEffect(()=>{
         usersService.getAllUsers().then(({data})=>{setUsers(data)})
+        
     },[])
 
   return (
-    <UserContext.Provider value={[{users,setUsers,newUser,setNewUser}]}>
+    <UserContext.Provider value={{users,setUsers,newUser,setNewUser}}>
         {children}
     </UserContext.Provider>
   )

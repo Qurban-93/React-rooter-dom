@@ -8,7 +8,10 @@ function Home() {
 
     
   return (
-    <Link to="/users">Users</Link>
+  <>
+    <Link className='btn' to="/users">Users</Link>
+    <Link className='btn' to="/about">Create User</Link>
+  </>
   )
 }
 

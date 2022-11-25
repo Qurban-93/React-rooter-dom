@@ -1,15 +1,20 @@
 import React from 'react'
 import {useUserContext} from "../../context/userContext"
 import "./index.scss"
+import { Link } from 'react-router-dom';
 
 
 function Users() {
 
-const { users } = useUserContext();
+const {users} = useUserContext();
+
+
 
   return (
 
+    
     <div>
+    <Link to="/">Home</Link>
       {users.map((item) =>(
        <div key={item.id}>
         <h1>
@@ -19,6 +24,7 @@ const { users } = useUserContext();
        </div>
       )
      )}
+     salam
     </div>
 
   )
